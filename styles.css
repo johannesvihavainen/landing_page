@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* NAVIGATION BAR CSS */
+header {
+    background-image: url(photos/blur-studio.jpg);
+    background-size: contain;
+}
+
+.nav-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed;
+    width: 100%;
+}
+
+.navigation-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.navigation-links li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.navigation-links ul a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.nav-bar-title {
+    color: #FFF;
+}
+
+.nav-logo {
+    width: 200px;
+}
+
+/* HERO CSS */
+.hero-container {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-title-1 {
+    margin-bottom: -40px;
+}
+
+.hero-about-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    width: 200px;
+    height: 35px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+}
+
+.hero-btn:hover {
+    background-color: red;
+}
+
+/* ABOUT US CSS */
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+}
+
+.about-us-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.about-us-css-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 60px;
+}
+
+.about-us-item {
+    background-color: black;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-us-item p:last-child {
+    font-size: 1.2rem;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.about-us-item-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.divider {
+    background-color: red;
+    width: 150px;
+    height: 2px;
+}
+
+/* SERVICES CSS */
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.services-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.services-css-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 60px;
+}
+
+.services-item {
+    background-color: rgb(209, 149, 209);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.services-item p:last-child {
+    font-size: 1.2rem;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.services-item-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* TOURS SECTION CSS */
+.form-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.contact-form {
+    background-color: black;
+    padding: 25px;
+    color: #FFF;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+    gap: 10px;
+}
+
+form label {
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+form input {
+    height: 35px;
+    padding: 10px;
+}
+
+form button {
+    height: 50px;
+    margin-top: 10px;
+}
+
+/* FOOTER CSS */
+footer {
+    background-color: black;
+    color: #FFF;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    gap: 30px;
+}
+
+footer button {
+    height: 40px;
+    background-color: red;
+    text-transform: uppercase;
+    border: 1px solid #FFF;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+footer button:hover {
+    background-color: rgb(253, 121, 121);
+}
