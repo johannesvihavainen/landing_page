@@ -14,8 +14,13 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: "Inter", sans-serif;
+     display: flex;
+    flex-direction: column;
 }
 
+main {
+    flex: 1;
+}
 nav {
     padding: 0.8rem;
     display: flex;
