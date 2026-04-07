@@ -785,3 +785,36 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+/* ===== FIX MOBILE WHITE SPACE UNDER FOOTER ===== */
+@media (max-width: 768px) {
+  /* Remove negative margin from contact-us to prevent layout shift */
+  .contact-us {
+    margin-top: 0;
+  }
+
+  /* Ensure body fills viewport properly on iOS */
+  body {
+    min-height: -webkit-fill-available;
+  }
+
+  html {
+    height: -webkit-fill-available;
+  }
+
+  /* Alternative: use 100% instead of vh for better iOS handling */
+  body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+
+  /* Remove any accidental bottom margin from last element */
+  main > :last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    margin-top: 0;
+    padding-bottom: 1.5rem;
+  }
+}
