@@ -45,6 +45,7 @@ nav ul a {
 .navbar-title-and-logo {
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 .logo {
