@@ -51,6 +51,8 @@ nav ul a {
 .logo {
     width: 100px;
     padding: 0;
+    /* margin-left: -2.5rem; */
+    padding-right: 1.5rem;
 }
 
 /* Hero Section: Centers text on top of the image */
