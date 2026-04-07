@@ -229,7 +229,51 @@ nav ul a {
     gap: 0.6rem;
     color: #b00000;
 }
+.service-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+.service-card li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    color: #374151;
+    font-weight: 400;
+}
+
+/* First list item becomes the card title */
+.service-card li:first-child {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111827;
+    padding-left: 0;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.75rem;
+}
+
+.service-card li:first-child::before {
+    display: none; /* no bullet on title */
+}
+
+/* Custom bullet using Font Awesome check-circle (already available) */
+.service-card li:not(:first-child)::before {
+    content: "\f058"; /* fa-check-circle */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #d70000;
+    font-size: 1rem;
+}
+
+/* Special case for .li-text if needed */
+.service-card li.li-text {
+    max-width: none;
+}
 /* Remove any old list-based text constraint if not needed */
 .li-text {
     max-width: none;
@@ -452,4 +496,292 @@ footer {
     .about-us h2 {
         font-size: 1.6rem;
     }
+}
+
+/* ===== DESKTOP & TABLET ENHANCEMENTS ===== */
+@media (min-width: 768px) {
+  /* ---------- Navigation ---------- */
+  nav {
+    padding: 1rem 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 120px; /* slightly larger on desktop */
+  }
+
+  nav ul {
+    gap: 2.5rem;
+  }
+
+  nav ul a {
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+  }
+
+  nav ul a:hover {
+    color: #d70000;
+  }
+
+  /* ---------- Hero Section ---------- */
+  .hero {
+    min-height: 70vh;
+    padding: 4rem 2rem;
+  }
+
+  .hero h2 {
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+
+  .hero .hero-subtext {
+    max-width: 700px;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero .hero-cta {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  /* ---------- Services Grid (Desktop Enhanced) ---------- */
+.services {
+  padding: 5rem 2rem;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.service-card-container {
+  gap: 2.5rem;
+  max-width: 1200px;
+}
+
+.service-card {
+  padding: 2.2rem 2rem;
+  font-size: 1.1rem;
+  text-align: left;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+  /* Remove the left border if you prefer the top gradient we'll add later */
+  border-left: none;
+}
+
+/* Top gradient accent (replaces left border) */
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #d70000 0%, #ff6b6b 100%);
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.service-card:hover::after {
+  height: 8px;
+  background: #d70000;
+}
+
+/* List styling */
+.service-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-card li {
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.5;
+  color: #2d3748;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+
+/* First item becomes card title */
+.service-card li:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.service-card li:first-child::before {
+  display: none;
+}
+
+/* Checkmark icon for all other list items */
+.service-card li:not(:first-child)::before {
+  content: "\f058"; /* fa-check-circle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: #d70000;
+  font-size: 1.2rem;
+}
+
+/* Ensure the special li-text class doesn't break anything */
+.service-card li.li-text {
+  max-width: none;
+}
+  /* ---------- About Us ---------- */
+  .about-us {
+    margin: 5rem auto;
+    padding: 0 2rem;
+  }
+
+  .about-us h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-us-card {
+    padding: 2.5rem 3rem;
+  }
+
+  .about-us-card p {
+    font-size: 1.1rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 2.5rem 1rem;
+  }
+
+  .footer-social {
+    gap: 3rem;
+  }
+
+  .social-link i,
+  .social-link .email-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+  }
+
+  .social-label {
+    font-size: 0.85rem;
+  }
+
+  footer p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- LARGER DESKTOP FINE‑TUNING (≥1024px) ---------- */
+@media (min-width: 1024px) {
+  nav {
+    padding: 1.2rem 4rem;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  nav ul {
+    gap: 3rem;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h2 {
+    font-size: 4rem;
+    max-width: 900px;
+  }
+
+  .hero .hero-subtext {
+    font-size: 1.6rem;
+  }
+
+  /* ---------- Services Grid (Larger Desktop) ---------- */
+.service-card-container {
+  max-width: 1600px;
+  display: flex;
+  gap: 3rem;
+}
+
+.service-card {
+  padding: 2.8rem 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.service-card li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.service-card li:first-child {
+  font-size: 1.7rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.service-card li:not(:first-child)::before {
+  font-size: 1.3rem;
+}
+
+/* Extra hover effect */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 50px -18px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+  .about-us {
+    max-width: 1000px;
+  }
+
+  .about-us-card {
+    padding: 3rem 4rem;
+  }
+
+
+  .about-us-card:hover {
+    transform: translateY(-6px);
+  }
+  
+}
+
+/* ===== FIX FOR 4‑CARD LAYOUT BETWEEN 984px AND 1300px ===== */
+@media (min-width: 984px) and (max-width: 1300px) {
+  /* Override the flex display from the 1024px query */
+  .service-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .service-card li:first-child {
+    font-size: 1.4rem;
+  }
+
+  .service-card li:not(:first-child) {
+    font-size: 0.95rem;
+  }
 }
