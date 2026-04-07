@@ -212,6 +212,65 @@ nav ul a {
     max-width: none;  /* override old 300px limit */
 }
 
+/* Social links container (already present) */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Each link is a column with icon + label */
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+/* Icon circle styling (applies to both GitHub and envelope) */
+.social-link i,
+.social-link .email-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    background-color: #444;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for the icon */
+.social-link:hover i,
+.social-link:hover .email-icon {
+    background-color: #d70000;
+    transform: translateY(-3px);
+}
+
+/* Text label under each icon */
+.social-label {
+    font-size: 0.75rem;
+    color: #ccc;
+    transition: color 0.2s ease;
+    font-weight: 400;
+}
+
+.social-link:hover .social-label {
+    color: #d70000;
+}
+
+/* Remove old specific .email-icon and .footer-social a overrides if they conflict */
+/* You can keep or delete the previous .email-icon and .footer-social a rules */
+
+/* Keep your existing footer background */
 footer {
     background-color: #2C2C2C;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #e5e7eb;
 }
