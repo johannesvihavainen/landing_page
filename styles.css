@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+nav {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #1f2937;
+}
+.navbar-title-and-logo {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    padding: 0;
+}
+/* Hero Section: Centers text on top of the image */
+.hero {
+    position: relative;          /* Establish positioning context for absolute children */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Vertical centering */
+    align-items: center;        /* Horizontal centering */
+    text-align: center;
+    min-height: 20vh;          /* Full viewport height, adjust as needed */
+    padding: 2rem;
+    overflow: hidden;           /* Ensures image doesn't overflow rounded corners (if any) */
+}
+
+/* Background Image: Covers entire hero section */
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Image covers container without distortion */
+    z-index: 0;                 /* Place behind text */
+}
+
+/* Optional: Dark overlay to improve text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);  /* Semi-transparent dark overlay */
+    z-index: 1;
+}
+
+/* Text & Button Styles (appear above the image and overlay) */
+.hero h2,
+.hero .hero-subtext,
+.hero .hero-cta {
+    position: relative;
+    z-index: 2;                 /* Ensure they sit on top of image + overlay */
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0.5rem 0;
+}
+
+.hero h2 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 700;
+    max-width: 90%;
+    line-height: 1.2;
+}
+
+.hero .hero-subtext {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    opacity: 0.95;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.hero .hero-cta {
+    background: #d70000;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9rem 2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
+.hero .hero-cta:hover {
+    background: #005fcc;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+/* Professional service cards */
+.services {
+    padding: 3rem 1rem;
+    background: #f9fafb;   /* subtle background to separate section */
+}
+.services h2 {
+    text-align: center;
+}
+
+.service-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.service-card {
+    background: white;
+    border-radius: 1rem;          /* larger, modern radius */
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Optional: add a subtle top accent border */
+.service-card {
+    border-left: 4px solid #d70000;  /* use your brand color */
+}
+
+/* Hover effect – professional lift */
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+/* Inner content styling – adjust based on your actual HTML */
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #111827;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4b5563;
+    margin: 0 0 1.25rem 0;
+    flex-grow: 1;
+}
+
+/* Optional icon/image style (if you add an icon inside the card) */
+.service-card .card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: #d70000;   /* or use an actual SVG/image */
+}
+
+/* CTA link/button inside card */
+.service-card .card-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #d70000;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: gap 0.2s;
+}
+
+.service-card .card-link:hover {
+    gap: 0.6rem;
+    color: #b00000;
+}
+
+/* Remove any old list-based text constraint if not needed */
+.li-text {
+    max-width: none;  /* override old 300px limit */
+}
+
+footer {
+    background-color: #2C2C2C;
+}
